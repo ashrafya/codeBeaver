@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import CoursesDB from "../DB/CoursesDB";
+import { GOOGLE_FORM } from "./Constants";
 
 const badgeColors: Record<string, string> = {
   New: "bg-green-500",
@@ -37,9 +39,25 @@ const NotesTests: React.FC = () => (
             <h3 className="text-lg font-bold text-gray-900 mb-2">{course.title}</h3>
             <p className="text-gray-600 mb-4 text-sm">{course.description}</p>
             <div className="mt-auto">
-              <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center justify-between mb-4">
                 <span className="text-gray-600 text-sm font-medium">{course.duration}</span>
                 <span className="text-gray-900 text-sm font-bold">${course.price}</span>
+              </div>
+              <div className="flex gap-3">
+                <Link
+                  to={`/course/${course.id}`}
+                  className="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                >
+                  Learn More
+                </Link>
+                <a
+                  href={GOOGLE_FORM}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-green-600 text-white text-center py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-sm font-medium"
+                >
+                  Register Now
+                </a>
               </div>
             </div>
           </div>

@@ -3,7 +3,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom'
 import { Element } from 'react-scroll'
 import TutoringHero from './components/TutoringHero'
 import Navbar from './components/Navbar'
-// import About from './components/About'
+import About from './components/About'
 import Features from './components/Features'
 import Pricing from './components/Pricing'
 import HowItWorks from './components/HowItWorks'
@@ -16,8 +16,8 @@ import Me from './components/Me'
 import Blog from './components/Blog'
 import NotesAndTests from './components/NotesTests'
 import BlogDetails from './components/BlogDetails';
+import CourseDetail from './components/CourseDetail';
 import CoursesSections from './components/CoursesSections'
-
 
 
 function App() {
@@ -71,6 +71,14 @@ function App() {
         }
       />
       <Route
+        path="/notes-and-tests"
+        element={
+        <>
+          <NotesAndTests />
+        </>
+        }
+      />
+      <Route
         path="/courses"
         element={
         <>
@@ -78,6 +86,7 @@ function App() {
         </>
         }
       />
+      <Route path="/course/:id" element={<CourseDetail />} />
       <Route
         path="/blog"
         element={

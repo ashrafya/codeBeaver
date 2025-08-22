@@ -126,7 +126,7 @@ const Navbar = () => {
 
           {/* Right: Button */}
             <div className="hidden md:flex items-center space-x-4">
-            <NotesButton onClick={() => navigate('/notes-and-tests')} />
+            <NotesButton onClick={() => navigate('/courses')} />
             <a
               href={GOOGLE_FORM}
               target="_blank"
@@ -181,7 +181,7 @@ const Navbar = () => {
               >
               Register Now
               </a>
-              <NotesButton />
+              <NotesButton onClick={() => navigate('/courses')} />
             </div>
           </nav>
         </div>
