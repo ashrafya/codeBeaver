@@ -3,7 +3,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom'
 import { Element } from 'react-scroll'
 import TutoringHero from './components/TutoringHero'
 import Navbar from './components/Navbar'
-import About from './components/About'
+// import About from './components/About'
 import Features from './components/Features'
 import Pricing from './components/Pricing'
 import HowItWorks from './components/HowItWorks'
@@ -16,6 +16,7 @@ import Me from './components/Me'
 import Blog from './components/Blog'
 import NotesAndTests from './components/NotesTests'
 import BlogDetails from './components/BlogDetails';
+import CoursesSections from './components/CoursesSections'
 
 
 
@@ -35,10 +36,12 @@ function App() {
           <TutoringHero />
           </Element>
           <Hbreak />
-          <Element name="about" id='about'>
+          <CoursesSections />
+          <Hbreak />
+          {/* <Element name="about" id='about'>
           <About />
           </Element>
-          <Hbreak />
+          <Hbreak /> */}
           <Element name="me" id='me'>
           <Me />
           </Element>
@@ -68,7 +71,7 @@ function App() {
         }
       />
       <Route
-        path="/notes-and-tests"
+        path="/courses"
         element={
         <>
           <NotesAndTests />

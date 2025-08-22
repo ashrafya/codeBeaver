@@ -35,7 +35,7 @@ const Navbar = () => {
   ];
 
   const pageLinks = [
-    { to: '/notes-and-tests', label: 'Notes & Tests' },
+    { to: '/courses', label: 'Courses' },
     { to: '/blog', label: 'Blog' },
   ];
 
@@ -69,7 +69,8 @@ const Navbar = () => {
               <rect x="14" y="1" width="7" height="6" />
               <rect x="14" y="11" width="7" height="12" />
             </svg>
-            <span className="ml-3 text-3xl font-bold text-gray-800">Tutor Hero</span>
+            <span className="ml-3 text-3xl font-bold text-gray-800">Code Beaver</span>
+
           </div>
 
           {/* Mobile menu button */}
