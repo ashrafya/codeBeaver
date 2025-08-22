@@ -1,4 +1,4 @@
-const GoogleForm = "https://docs.google.com/forms/d/e/1FAIpQLSdp3QsBcOuG4CPZO6kQnOvkjkrdFAabIpSyIyNBjDoR0uJIYw/viewform?usp=dialog"
+const GoogleForm = "https://docs.google.com/forms/d/e/1FAIpQLSeS77QoZikBonqvUsDo2rv5MeXy-dkwFLRSv7iFJarxGXaDaQ/viewform?usp=header"
 
 const RegisterButton = () => {
   return ( 
