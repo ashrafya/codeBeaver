@@ -15,7 +15,7 @@ const NotesTests: React.FC = () => (
       </p>
     </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      {CoursesDB.map((course, idx) => (
+      {CoursesDB.map((course) => (
         <div
           key={course.id}
           className="bg-white rounded-2xl shadow border border-gray-200 flex flex-col overflow-hidden"
