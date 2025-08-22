@@ -35,7 +35,7 @@ const Navbar = () => {
   ];
 
   const pageLinks = [
-    { to: '/notes-and-tests', label: 'Notes & Tests' },
+    { to: '/notes-and-tests', label: 'Courses' },
     { to: '/blog', label: 'Blog' },
   ];
 
