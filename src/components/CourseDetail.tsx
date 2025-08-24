@@ -2,7 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import CoursesDB from "../DB/CoursesDB";
 import { GOOGLE_FORM } from "./Constants";
-import { FaArrowLeft, FaClock, FaDollarSign, FaUserGraduate, FaLaptop, FaCode, FaChartBar, FaBrain, FaHome, FaInfoCircle, FaCalendarAlt, FaBook, FaRocket, FaLightbulb, FaComments, FaTrophy, FaCreditCard, FaQuestionCircle, FaCheck, FaPlay, FaUsers, FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaArrowLeft, FaClock, FaDollarSign, FaUserGraduate, FaLaptop, FaCode, FaChartBar, FaBrain, FaInfoCircle, FaCalendarAlt, FaBook, FaLightbulb, FaComments, FaTrophy, FaCreditCard, FaQuestionCircle, FaCheck, FaPlay, FaUsers, FaDiscord} from "react-icons/fa";
 
 const CourseDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();

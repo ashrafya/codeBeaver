@@ -69,7 +69,7 @@ const Navbar = () => {
               <rect x="14" y="1" width="7" height="6" />
               <rect x="14" y="11" width="7" height="12" />
             </svg>
-            <span className="ml-3 text-3xl font-bold text-gray-800">Code Beaver</span>
+            <span className="ml-3 text-3xl font-bold text-gray-800">Model Minds</span>
 
           </div>
 
