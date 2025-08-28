@@ -1,18 +1,27 @@
 import mlPreview from "../assets/notesPDFs/math1.webp";
 import pythonPreview from "../assets/notesPDFs/math2.webp";
 import dataSciencePreview from "../assets/notesPDFs/chem3.jpeg";
+import { 
+  BOOTCAMP_FULL_PRICE, 
+  BOOTCAMP_DURATION_TEXT,
+  COURSE_PYTHON_PRICE, 
+  COURSE_DATA_SCIENCE_PRICE,
+  COURSE_PYTHON_DURATION,
+  COURSE_DATA_SCIENCE_DURATION
+} from "../components/Constants";
 
 const CoursesDB = [
   {
     id: "intro-ml-ai",
-    title: "Intro to Machine Learning & AI: From Zero to Neural Nets",
-    description: "Master the fundamentals of machine learning and artificial intelligence. Learn from basic concepts to building neural networks with hands-on projects.",
+    title: "Complete AI Bootcamp: From Zero to Neural Nets",
+    description: "Master the fundamentals of machine learning and artificial intelligence in this comprehensive 8-week bootcamp. Learn from basic concepts to building neural networks with hands-on projects.",
     subject: "Machine Learning & AI",
     level: "Beginner",
     previewPDF: mlPreview,
-    price: 299,
-    duration: "8 weeks",
-    badge: "New",
+    price: BOOTCAMP_FULL_PRICE,
+    duration: BOOTCAMP_DURATION_TEXT,
+    badge: "Bootcamp",
+    type: "bootcamp",
     coverImage: mlPreview,
   },
   {
@@ -22,8 +31,10 @@ const CoursesDB = [
     subject: "Python Programming",
     level: "Beginner",
     previewPDF: pythonPreview,
-    price: 199,
-    duration: "6 weeks",
+    price: COURSE_PYTHON_PRICE,
+    duration: COURSE_PYTHON_DURATION,
+    badge: "Course",
+    type: "course",
     coverImage: pythonPreview,
   },
   {
@@ -33,9 +44,10 @@ const CoursesDB = [
     subject: "Data Science",
     level: "Beginner",
     previewPDF: dataSciencePreview,
-    price: 249,
-    duration: "7 weeks",
-    badge: "Hot",
+    price: COURSE_DATA_SCIENCE_PRICE,
+    duration: COURSE_DATA_SCIENCE_DURATION,
+    badge: "Course",
+    type: "course",
     coverImage: dataSciencePreview,
   }
 ];

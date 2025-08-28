@@ -3,6 +3,7 @@ import yawarImg from "../assets/killarneyYawar.png";
 // TODO: Replace the placeholder file name below with your friend's actual image file.
 import friendImg from "../assets/musPicture.jpeg";
 import RegisterButton from "./RegisterButton";
+import { BOOTCAMP_DURATION_TEXT } from "./Constants";
 
 const Me: React.FC = () => {
   return (
@@ -36,7 +37,7 @@ const Me: React.FC = () => {
           We’re UofT engineering grads. We teach coding, math, and ML.
         </p> */}
         <p className="text-gray-500 text-xl">
-          We build your <span className="font-bold text-gray-900">core coding</span>. We sharpen <span className="font-bold text-gray-900">math intuition</span>. We grow <span className="font-bold text-gray-900">project confidence</span>. 8-week bootcamp.
+          We build your <span className="font-bold text-gray-900">core coding</span>. We sharpen <span className="font-bold text-gray-900">math intuition</span>. We grow <span className="font-bold text-gray-900">project confidence</span>. {BOOTCAMP_DURATION_TEXT}.
         </p>
       </div>
       <div className="mt-12 flex justify-center">

@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import RegisterButton from "./RegisterButton";
+import { 
+  BOOTCAMP_FULL_PRICE, 
+  BOOTCAMP_INSTALLMENT_PRICE,
+  BOOTCAMP_DURATION_TEXT,
+  COURSE_ML_AI_PRICE
+} from "./Constants";
 
 const plans = [
 	{
 		name: "Single Course Module",
 		description:
 			"Pick one focused module: Coding Foundations, Math for ML, or Intro ML.",
-		fullPrice: 249,
+		fullPrice: COURSE_ML_AI_PRICE,
 		installmentPayment: 140,
 		supportsInstallments: true,
 		features: [
@@ -21,9 +27,9 @@ const plans = [
 	{
 		name: "Full AI Bootcamp",
 		description:
-			"8-week pathway: code → math → ML + capstone. University-ready prep.",
-		fullPrice: 600,
-		installmentPayment: 350,
+			`${BOOTCAMP_DURATION_TEXT} pathway: code → math → ML + capstone. University-ready prep.`,
+		fullPrice: BOOTCAMP_FULL_PRICE,
+		installmentPayment: BOOTCAMP_INSTALLMENT_PRICE,
 		supportsInstallments: true,
 		features: [
 			"All three modules",

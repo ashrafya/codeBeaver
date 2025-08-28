@@ -5,6 +5,8 @@ import { GOOGLE_FORM } from "./Constants";
 const badgeColors: Record<string, string> = {
   New: "bg-green-500",
   Hot: "bg-red-500",
+  Bootcamp: "bg-purple-600",
+  Course: "bg-blue-600",
 };
 
 const NotesTests: React.FC = () => (

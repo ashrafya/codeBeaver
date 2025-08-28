@@ -9,7 +9,7 @@ const faqs = [
 	{
 		question: "How many hours per week?",
 		answer:
-			"Expect ~4–5 hours live + 4–6 hours guided practice. Total 8–11 hours weekly for solid progress.",
+			"Expect ~3 hours live + 4–6 hours guided practice. Total 7–9 hours weekly for solid progress.",
 	},
 	{
 		question: "Do I need prior experience?",
@@ -19,7 +19,7 @@ const faqs = [
 	{
 		question: "What is the weekly format?",
 		answer:
-			"Live workshops, short concept briefs, structured practice sets, and mentor feedback checkpoints.",
+			"Two 1.5-hour live workshops per week, short concept briefs, structured practice sets, and mentor feedback checkpoints.",
 	},
 	{
 		question: "Are sessions recorded?",

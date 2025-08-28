@@ -1,8 +1,14 @@
-import React from "react";
+// import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import CoursesDB from "../DB/CoursesDB";
 import { GOOGLE_FORM } from "./Constants";
 import { FaArrowLeft, FaClock, FaDollarSign, FaUserGraduate, FaLaptop, FaCode, FaChartBar, FaBrain, FaInfoCircle, FaCalendarAlt, FaBook, FaLightbulb, FaComments, FaTrophy, FaCreditCard, FaQuestionCircle, FaCheck, FaPlay, FaUsers, FaDiscord} from "react-icons/fa";
+import { 
+  BOOTCAMP_DURATION_TEXT, 
+  BOOTCAMP_FULL_PRICE, 
+  BOOTCAMP_MONTHLY_PRICE,
+  BOOTCAMP_WEEKLY_SCHEDULE
+} from "./Constants";
 
 const CourseDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -45,20 +51,25 @@ const CourseDetail: React.FC = () => {
               <FaArrowLeft className="w-4 h-4 mr-2" />
               Back to Courses
             </Link>
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <FaBrain className="w-16 h-16 text-blue-200" />
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-4">
-                Intro to Machine Learning & AI
-              </h1>
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-blue-100">
-                From Zero to Neural Nets
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Your first step from Python beginner to AI builder — no experience required.
-                Build real machine learning models and graduate with a resume-worthy project and a LinkedIn endorsement.
-              </p>
+                         <div className="text-center">
+               <div className="flex justify-center mb-4">
+                 <span className="bg-purple-600 text-white text-sm font-semibold tracking-wide px-4 py-2 rounded-full shadow-lg">
+                   🎓 Complete Bootcamp
+                 </span>
+               </div>
+               <div className="flex justify-center mb-6">
+                 <FaBrain className="w-16 h-16 text-blue-200" />
+               </div>
+                             <h1 className="text-5xl md:text-6xl font-bold mb-4">
+                 Complete AI Bootcamp
+               </h1>
+               <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-blue-100">
+                 From Zero to Neural Nets
+               </h2>
+                             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                 A comprehensive {BOOTCAMP_DURATION_TEXT} bootcamp taking you from Python beginner to AI builder — no experience required.
+                 Build real machine learning models and graduate with a resume-worthy project and a LinkedIn endorsement.
+               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href={GOOGLE_FORM}
@@ -83,7 +94,7 @@ const CourseDetail: React.FC = () => {
           <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
             <div className="flex items-center gap-3 mb-6">
               <FaInfoCircle className="w-6 h-6 text-blue-600" />
-              <h2 className="text-3xl font-bold text-gray-900">About the Course</h2>
+                             <h2 className="text-3xl font-bold text-gray-900">About the Bootcamp</h2>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -95,11 +106,11 @@ const CourseDetail: React.FC = () => {
                   this course is your launchpad.
                 </p>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-4">What makes it different?</h3>
-                <p className="text-gray-700">
-                  This 12-week bootcamp takes you from no coding experience to building and presenting 
-                  your own AI model. It's beginner-friendly, career-relevant, and outcome-driven.
-                </p>
+                                 <h3 className="text-xl font-bold text-gray-900 mb-4">What makes this bootcamp different?</h3>
+                 <p className="text-gray-700">
+                   This comprehensive {BOOTCAMP_DURATION_TEXT} bootcamp takes you from no coding experience to building and presenting 
+                   your own AI model. It's beginner-friendly, career-relevant, and outcome-driven.
+                 </p>
               </div>
               
               <div>
@@ -130,19 +141,19 @@ const CourseDetail: React.FC = () => {
           <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
             <div className="flex items-center gap-3 mb-6">
               <FaCalendarAlt className="w-6 h-6 text-blue-600" />
-              <h2 className="text-3xl font-bold text-gray-900">Course Overview</h2>
+                             <h2 className="text-3xl font-bold text-gray-900">Bootcamp Overview</h2>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center p-4 bg-blue-50 rounded-lg">
                 <FaClock className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                <h4 className="font-semibold text-gray-900">Course Length</h4>
-                <p className="text-gray-600">12 Weeks</p>
+                                 <h4 className="font-semibold text-gray-900">Bootcamp Length</h4>
+                <p className="text-gray-600">{BOOTCAMP_DURATION_TEXT}</p>
               </div>
               <div className="text-center p-4 bg-blue-50 rounded-lg">
                 <FaUsers className="w-8 h-8 text-blue-600 mx-auto mb-2" />
                 <h4 className="font-semibold text-gray-900">Sessions</h4>
-                <p className="text-gray-600">3 x 1-hour live online classes per week</p>
+                                 <p className="text-gray-600">{BOOTCAMP_WEEKLY_SCHEDULE}</p>
               </div>
               <div className="text-center p-4 bg-blue-50 rounded-lg">
                 <FaDiscord className="w-8 h-8 text-blue-600 mx-auto mb-2" />
@@ -168,7 +179,7 @@ const CourseDetail: React.FC = () => {
             <div className="mb-8">
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
-                <h3 className="text-2xl font-bold text-gray-900">Phase 1: Python & Programming Fundamentals (Weeks 1–3)</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Phase 1: Python & Programming Fundamentals (Weeks 1–2)</h3>
               </div>
               
               <div className="grid md:grid-cols-3 gap-6">
@@ -203,7 +214,7 @@ const CourseDetail: React.FC = () => {
             <div className="mb-8">
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
-                <h3 className="text-2xl font-bold text-gray-900">Phase 2: Intro to AI & ML Foundations (Weeks 4–6)</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Phase 2: Intro to AI & ML Foundations (Weeks 3–5)</h3>
               </div>
               
               <div className="grid md:grid-cols-3 gap-6">
@@ -238,7 +249,7 @@ const CourseDetail: React.FC = () => {
             <div className="mb-8">
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
-                <h3 className="text-2xl font-bold text-gray-900">Phase 3: Deep Learning & Neural Networks (Weeks 7–10)</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Phase 3: Deep Learning & Neural Networks (Weeks 6–7)</h3>
               </div>
               
               <div className="grid md:grid-cols-2 gap-6">
@@ -259,7 +270,7 @@ const CourseDetail: React.FC = () => {
                   </ul>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-2">Week 9: Improve Your Model</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">Week 6: Improve Your Model</h4>
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>• Hyperparameter tuning</li>
                     <li>• Visualizing training results</li>
@@ -267,7 +278,7 @@ const CourseDetail: React.FC = () => {
                   </ul>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-2">Week 10: Real-World AI + Ethics</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">Week 7: Real-World AI + Ethics</h4>
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>• Applications: ChatGPT, vision, autonomous cars</li>
                     <li>• Bias, misinformation, deepfakes</li>
@@ -281,12 +292,12 @@ const CourseDetail: React.FC = () => {
             <div className="mb-8">
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">4</div>
-                <h3 className="text-2xl font-bold text-gray-900">Phase 4: Final Project & Showcase (Weeks 11–12)</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Phase 4: Final Project & Showcase (Week 8)</h3>
               </div>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-2">Week 11: Project Build Week</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">Week 8: Project Build Week</h4>
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>• Choose a dataset & problem</li>
                     <li>• Get guided support from instructors</li>
@@ -294,7 +305,7 @@ const CourseDetail: React.FC = () => {
                   </ul>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-2">Week 12: Present & Reflect</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">Week 8: Present & Reflect</h4>
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>• Present your project live or recorded</li>
                     <li>• Get peer and mentor feedback</li>
@@ -383,13 +394,13 @@ const CourseDetail: React.FC = () => {
             </p>
             
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-xl mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">🎓 Full Bootcamp Package — $650 CAD</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">🎓 Full Bootcamp Package — ${BOOTCAMP_FULL_PRICE} CAD</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-3">Includes:</h4>
                   <ul className="space-y-2">
                     {[
-                      "12 weeks of live instruction (36+ hours total)",
+                                             "{BOOTCAMP_DURATION_TEXT} of live instruction ({BOOTCAMP_TOTAL_HOURS})",
                       "Lifetime access to all session recordings and materials",
                       "Dedicated Discord community for support",
                       "Certificate of completion",
@@ -408,12 +419,12 @@ const CourseDetail: React.FC = () => {
                   <div className="space-y-3">
                     <div className="bg-white p-4 rounded-lg">
                       <h5 className="font-semibold text-gray-900">One-Time Payment</h5>
-                      <p className="text-2xl font-bold text-blue-600">$650 CAD</p>
+                      <p className="text-2xl font-bold text-blue-600">${BOOTCAMP_FULL_PRICE} CAD</p>
                       <p className="text-sm text-gray-600">Pay upfront and save.</p>
                     </div>
                     <div className="bg-white p-4 rounded-lg">
                       <h5 className="font-semibold text-gray-900">Monthly Plan</h5>
-                      <p className="text-2xl font-bold text-blue-600">$225 CAD/month</p>
+                      <p className="text-2xl font-bold text-blue-600">${BOOTCAMP_MONTHLY_PRICE} CAD/month</p>
                       <p className="text-sm text-gray-600">Split your payment over 3 months.</p>
                     </div>
                   </div>
@@ -429,10 +440,10 @@ const CourseDetail: React.FC = () => {
               <h2 className="text-3xl font-bold text-gray-900">Got Questions?</h2>
             </div>
             
-            <p className="text-gray-700 mb-6 text-lg">
-              Curious if this course is the right fit? We're happy to walk you through the curriculum, 
-              outcomes, and next steps.
-            </p>
+                         <p className="text-gray-700 mb-6 text-lg">
+               Curious if this bootcamp is the right fit? We're happy to walk you through the curriculum, 
+               outcomes, and next steps.
+             </p>
             
             <div className="grid md:grid-cols-2 gap-8">
               <div className="text-center">
@@ -589,15 +600,18 @@ const CourseDetail: React.FC = () => {
                 </div>
               </div>
 
-              {course.badge && (
-                <div className="mb-6">
-                  <span className={`inline-block px-3 py-1 text-sm font-semibold text-white rounded-full ${
-                    course.badge === "New" ? "bg-green-500" : "bg-red-500"
-                  }`}>
-                    {course.badge}
-                  </span>
-                </div>
-              )}
+                             {course.badge && (
+                 <div className="mb-6">
+                   <span className={`inline-block px-3 py-1 text-sm font-semibold text-white rounded-full ${
+                     course.badge === "New" ? "bg-green-500" : 
+                     course.badge === "Hot" ? "bg-red-500" :
+                     course.badge === "Bootcamp" ? "bg-purple-600" :
+                     course.badge === "Course" ? "bg-blue-600" : "bg-gray-500"
+                   }`}>
+                     {course.badge}
+                   </span>
+                 </div>
+               )}
 
               <a
                 href={GOOGLE_FORM}

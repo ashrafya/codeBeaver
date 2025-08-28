@@ -1,10 +1,11 @@
 import { FaUserGraduate, FaChalkboardTeacher, FaCalendarAlt, FaDollarSign , FaLaptop } from "react-icons/fa";
 import { GiProgression } from "react-icons/gi";
 import NotesButton from "./NotesButton";
+import { BOOTCAMP_DURATION_TEXT } from "./Constants";
 
 const features = [
   {
-    title: "8-Week Structured Bootcamp",
+    title: `${BOOTCAMP_DURATION_TEXT} Structured Bootcamp`,
     description: "A focused, fast-paced roadmap that blends coding, math, and ML foundations—designed for ambitious high school students.",
     icon: <FaCalendarAlt className="w-8 h-8 text-blue-600" />,
   },
@@ -43,7 +44,7 @@ const Features: React.FC = () => (
       <p className="text-blue-600 font-semibold text-lg mb-2">Bootcamp Highlights</p>
       <h2 className="text-5xl font-extrabold text-gray-900 mb-4">Launch Your University Tech Journey</h2>
       <p className="text-xl text-gray-500 mb-14">
-        An 8-week immersive pathway blending coding fundamentals, math intuition, and machine learning concepts—ending with a capstone that proves you’re ready.
+        A {BOOTCAMP_DURATION_TEXT} immersive pathway blending coding fundamentals, math intuition, and machine learning concepts—ending with a capstone that proves you’re ready.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
         {features.map((feature) => (

@@ -1,5 +1,6 @@
 import React from "react";
 import RegisterButton from "./RegisterButton";
+import { BOOTCAMP_DURATION_TEXT } from "./Constants";
 
 interface Course {
   id: string;
@@ -69,7 +70,7 @@ const CoursesSections: React.FC = () => {
           <p className="text-blue-600 font-semibold text-lg mb-2">Bootcamp Path</p>
             <h2 className="text-5xl font-extrabold text-gray-900 mb-4">Three Stages. One Outcome.</h2>
           <p className="text-xl text-gray-500 mb-14">
-            A clear 8-week progression: code → math → applied machine learning.
+            A clear {BOOTCAMP_DURATION_TEXT} progression: code → math → applied machine learning.
           </p>
         </div>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
